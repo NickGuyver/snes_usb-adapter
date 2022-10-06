@@ -1,14 +1,13 @@
 This was my attempt at making the lowest possible latency SNES to USB adapter. It is extremely simple and I did a lot of testing to see how much quicker than spec I could go without breaking communications to the controller IC.
 
-Testing, with an input latency testing setup I created, shows the following stats (note µs not ms):
+Testing, with an input latency testing setup I created (https://github.com/NickGuyver/usb_input_latency), shows the following stats:
 
-Min - 19µs
+	Minimum - 0.016033 ms
+	Maximum - 0.155016 ms
+	Average - 0.08671401102204408 ms
+	Sample Standard Deviation - 0.03677839974308105 ms
 
-Avg - 92µs
-
-Max - 156µs
-
-StDev - 42µs
+Raw results are here - https://github.com/NickGuyver/usb_input_latency/tree/main/total_phase/results/12095757/20221005/154122
 
 According to the controller IC spec it should be is 16.67ms, and this is significantly faster. The MiSTer testing sheet* shows the fastest of any retro controller or adapter, not limited to SNES, as 116µs. The lowest average currently recorded is 662µs. This setup proves that there is possibility to have a much lower latency retro controller to USB adapter and I was able to accomplish my goal.
 
